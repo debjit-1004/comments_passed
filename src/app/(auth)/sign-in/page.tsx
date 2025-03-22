@@ -10,7 +10,7 @@ import { Input } from "@/components/ui/input"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Button } from "@/components/ui/button";
 import { Loader2 } from "lucide-react";
-import { signinschema } from "@/schemas/signinschema";
+import { signInSchema } from "@/schemas/signInSchema";
 import { signIn } from "next-auth/react";
 
 function Signinpage() {
@@ -21,8 +21,8 @@ function Signinpage() {
   const router = useRouter();
 
   //zod implementation
-  const form = useForm<z.infer<typeof signinschema>>({
-    resolver : zodResolver(signinschema),
+  const form = useForm<z.infer<typeof signInSchema>>({
+    resolver : zodResolver(signInSchema),
     defaultValues : {
       identifier : '',
       password : ''
