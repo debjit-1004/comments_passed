@@ -66,7 +66,9 @@ const UserSchema: Schema<User> = new Schema({
 });
 
 const UserModel =
+//to check if the model already exists and with interface User type
   (mongoose.models.User as mongoose.Model<User>) ||
+  //givng type safety by <User>  
   mongoose.model<User>('User', UserSchema);
 
 export default UserModel;

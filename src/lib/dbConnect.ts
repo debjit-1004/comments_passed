@@ -5,6 +5,7 @@ type ConnectionObject = {
   isConnected?: number;
 };
 
+//connection is a object of type ConnectionObject
 const connection: ConnectionObject = {};
 
 //check for promise<void> type
